@@ -1,0 +1,64 @@
+\documentclass{article}
+    % General document formatting
+    \usepackage[margin=0.7in]{geometry}
+    \usepackage[parfill]{parskip}
+    \usepackage[utf8]{inputenc}
+    
+    % Related to math
+    \usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+
+
+\newcommand{\kon}{k_{on}}
+\newcommand{\koff}{k_{off}}
+
+
+
+\newcommand{\Entity}[1]{\textrm{#1}}
+\newcommand{\Conc}[1]{\textrm{[#1]}}
+\newcommand{\Total}[1]{\Conc{#1}_\textrm{Total}}
+
+\newcommand{\DCDt}[1]{\dfrac{\mathrm{d}\Conc{#1}}{\mathrm{d}t}}
+
+
+
+\newcommand{\A}{\Entity{A}}
+\newcommand{\B}{\Entity{B}}
+\newcommand{\AB}{\Entity{AB}}
+
+\begin{document}
+
+\section*{Examples for reference}
+% Equation Example with Named Reference
+\begin{equation}
+	\tag{*} % Change Equation Marker
+	E=m
+	\label{eqn:Stokes}
+\end{equation}
+
+As seen in \eqref{eqn:Stokes}.
+
+
+\section*{Equations for One to One Binding}
+
+\begin{equation}
+	\A + \B \overset{\kon}{\underset{\koff}{\rightleftharpoons}}\AB
+	\label{eqn:BindingSchemaAB}
+\end{equation}
+\eqref{eqn:BindingSchemaAB}
+
+\begin{align}
+\begin{split}
+	\DCDt{A} &= \koff\Conc{AB} - \kon\Conc{A}\Conc{B}	\\
+	\DCDt{B} &= \koff\Conc{AB} - \kon\Conc{A}\Conc{B}	\\
+	\DCDt{AB} &= \kon\Conc{A}\Conc{B} - \koff\Conc{AB}	\\
+	\Total{AB} &= \A + \B + \AB
+	\label{eqn:EquationsForAB}
+\end{split}
+\end{align}
+
+\eqref{eqn:EquationsForAB}
+
+
+
+\end{document}

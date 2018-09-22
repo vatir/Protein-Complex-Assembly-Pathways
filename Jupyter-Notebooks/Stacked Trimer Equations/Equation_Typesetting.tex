@@ -1,0 +1,187 @@
+% Template for Biophysics paper in LaTeX
+%
+% To compile into a document, run
+% latex biophys_latex_template
+% bibtex biophys_latex_template (if bib file and bst file is included in TeX file)
+% latex biophys_latex_template (run 2-3 times repeatedly)
+% dvips biophys_latex_template.dvi
+%
+% or replace the latex command by the pdflatex command in the lines above to
+% generate a PDF file and use acroread or xpdf for viewing and
+% printing instead of the postscript generating program dvips
+
+% Use standard biophys document class with default font size
+% and typeset in one column. If you need to typeset in two column
+% then give the option "twocolumn" ie \documentclass[twocolumn]{biophys}
+\documentclass{biophys}
+\usepackage{helvet,times}
+\usepackage{bm,textcomp}
+
+%\jno{kxl014} %journal number
+\gridframe{N}%option for grid around the text "Y" or "N"
+\cropmark{N}%option for cropmark around the text "Y" or "N"
+
+%The first page number and last page number automatically generated.
+%To change the page number \setcounter{page}{10} automatically reset
+%the first and last page number but two times compilation required.
+%If you want to edit the page range in catch line
+% then edit the below two lines
+%\fpage{}
+%\lpage{}
+%For update volume number, activate below command
+%\volume{00}
+%For update issue number, activate below command
+%\issue{00}
+%For update Month, activate below command
+%\Month{Month}
+%For update Year, activate below command
+%\Year{Year}
+
+
+% Packages to load (all standard on a modern LaTeX system on Linux)
+
+% Make doublespaced ugly typography required for mysterious
+% reasons by most journals - comment out for normal output
+%\usepackage{setspace}
+%\doublespacing
+% AMS-Math package to have nice multi-line equations and other goodies
+\usepackage{amsmath}
+\usepackage{physics}
+% Show labels for easy orientation, comment out for final version
+% \usepackage{showlabels}
+
+% EPS/PDF graphics
+% Place figures in the document directory in both the EPS and PDF
+% formats, e.g., fig_1.eps and fig_1.pdf. Use the includegraphics
+% command without file extension, e.g. \includegraphics*[width=3.25in]{fig_1}
+% The pdflatex or latex programs then work automagically with the
+% appropriate formats.  EPS figures can be converted to PDF using
+% the epstopdf program present on most Linux disributions. Epstopdf and graphicx
+% are included in biophys class file.
+% \usepackage{graphicx}
+
+% Citation style in the text: numbers in parenthesis, sorted by their
+% order in the list of references.
+% Uses a range if possible: (1-3), not (1,2,3)
+
+\usepackage[round,numbers,sort&compress]{natbib}
+
+% Bibliography style (requires the style file biophysj.bst in the
+% document directory)
+
+%\bibliographystyle{biophysj}
+
+% Numbering style in the list of references: a number followed by a period
+
+
+% Examples of special definitions (amsmath package required)
+%\newcommand{\erf}{\operatorname{erf}}        % error function
+%\newcommand{\erfc}{\operatorname{erfc}}      % complementary error function
+%\newcommand{\BibTeX}{\textsc{Bib}\TeX}       % corect BibTeX appearance
+
+%\renewcommand{\baselinestretch}{1.5}
+\linespread{1.5}
+
+\newcommand{\etal}{\textit{et al}.\ }
+\newcommand{\ie}{\textit{i}.\textit{e}.,\ }
+\newcommand{\eg}{\textit{e}.\textit{g}.,\ }
+\newcommand{\apriori}{\textit{a priori}\xspace}
+\newcommand{\Apriori}{\textit{A priori}\xspace}
+
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}\xspace}
+\providecommand{\orderm}[1]{\ensuremath{10^{#1}}\xspace}
+
+\newcommand{\kon}{\ensuremath{k_{\textrm{on}}}\xspace}
+\newcommand{\koff}{\ensuremath{k_{\textrm{off}}}\xspace}
+
+\newcommand{\konunit}{\ensuremath{\textrm{M}^{-1}\textrm{s}^{-1}}\xspace}
+\newcommand{\koffunit}{\ensuremath{\textrm{s}^{-1}}\xspace}
+\newcommand{\synunit}{\ensuremath{\textrm{M}^{-1}\textrm{s}^{-1}}\xspace}
+\newcommand{\delunit}{\ensuremath{\textrm{s}^{-1}}\xspace}
+
+\newcommand{\M}{\ensuremath{\textrm{M}}\xspace}
+\newcommand{\nM}{\ensuremath{\textrm{n\M}}\xspace}
+\newcommand{\Concunit}{\M}
+\newcommand{\kdunit}{\Concunit}
+
+
+\newcommand{\species}[1]{\ensuremath{\textrm{S}_{#1}}\xspace}
+
+
+%\newcommand{\konAA}{\ensuremath{k_{\textrm{on,A\!A}}}}
+%\newcommand{\koffAA}{\ensuremath{k_{\textrm{off,A\!A}}}}
+
+\newcommand{\Entity}[1]{\ensuremath{\textrm{#1}}\xspace}
+\newcommand{\Conc}[1]{\ensuremath{\textrm{[#1{}]}}\xspace}
+\newcommand{\Total}[1]{\ensuremath{\quad\mathclap{\Conc{#1}_\textrm{Total}}\qquad}\xspace}
+\newcommand{\TotalNoSpacing}[1]{\ensuremath{\Conc{#1}_\textrm{Total}}}
+
+\newcommand{\Initial}[1]{\ensuremath{\Conc{#1}_\textrm{0}}\xspace}
+\newcommand{\InitialSq}[1]{\ensuremath{\Conc{#1}_\textrm{0}^2}\xspace}
+
+\newcommand{\TotalSS}[1]{\ensuremath{\quad\mathclap{\Conc{#1}_\textrm{Total,SS}}\qquad}\xspace}
+\newcommand{\TotalSSNoSpacing}[1]{\ensuremath{\Conc{#1}_\textrm{Total,SS}}\xspace}
+\newcommand{\ConcSS}[1]{\ensuremath{\Conc{#1}_\textrm{SS}}\xspace}
+
+%\newcommand{\DCDt}[1]{\dfrac{\mathrm{d}\Conc{#1}}{\mathrm{d}t}}
+\newcommand{\DCDtNoSpacing}[1]{\ensuremath{{\dfrac{\mathrm{d}\Conc{#1{}}}{\mathrm{d}t}}}}
+
+%\newcommand{\DCDtNoSpacing}[1]{\ensuremath{\mathclap{\dfrac{\mathrm{d}\Conc{#1}}{\mathrm{d}t}}}}
+\newcommand{\DCDt}[1]{\ensuremath{\quad\mathclap{\DCDtNoSpacing{#1}}\qquad}}
+
+\newcommand{\A}{\ensuremath{\Entity{A}}\xspace}
+\newcommand{\B}{\ensuremath{\Entity{B}}\xspace}
+\newcommand{\AB}{\ensuremath{\Entity{AB}}\xspace}
+\newcommand{\BB}{\ensuremath{\Entity{BB}}\xspace}
+\newcommand{\ABB}{\ensuremath{\Entity{ABB}}\xspace}
+\newcommand{\AtoA}{\ensuremath{\Entity{AA}}\xspace}
+\renewcommand{\AA}{\AtoA}
+
+\renewcommand{\P}{\ensuremath{\Entity{P}}\xspace}
+\newcommand{\N}{\ensuremath{\Entity{N}}\xspace}
+\newcommand{\PN}{\ensuremath{\Entity{PN}}\xspace}
+\newcommand{\PPN}{\ensuremath{\Entity{PPN}}\xspace}
+
+\newcommand{\invivo}{\emph{in vivo}-like\xspace}
+\newcommand{\invitro}{\emph{in vitro}-like\xspace}
+
+\newcommand{\del}{\ensuremath{\delta{}}\xspace}
+\newcommand{\syn}{\ensuremath{Q{}}\xspace}
+
+\newcommand{\konX}[1]{\ensuremath{k_{\textrm{on},\textrm{#1}}}\xspace}
+\newcommand{\koffX}[1]{\ensuremath{k_{\textrm{off},\textrm{#1}}}\xspace}
+\newcommand{\kd}{\ensuremath{K_d}\xspace}
+\newcommand{\kdSub}[1]{\ensuremath{K_{d,\textrm{#1}}}\xspace}
+\newcommand{\kdWSpacing}{\ensuremath{\quad\mathclap{\kd}\quad}}
+\newcommand{\kdSubWSpacing}[1]{\ensuremath{\quad\mathclap{\kdSub{#1}}\quad}}
+\newcommand{\keff}{\ensuremath{k^\textrm{eff}}\xspace}
+
+\newcommand{\konAB}{\konX{\AB}}
+\newcommand{\koffAB}{\koffX{\AB}}
+
+\newcommand{\konAA}{\konX{\AA}}
+\newcommand{\koffAA}{\koffX{\AA}}
+
+\newcommand{\konPN}{\konX{\PN}}
+\newcommand{\koffPN}{\koffX{\PN}}
+\newcommand{\konPPN}{\konX{\PPN}}
+\newcommand{\koffPPN}{\koffX{\PPN}}
+\newcommand{\kdPN}{\kdSub{\PN}}
+\newcommand{\kdPPN}{\kdSub{\PPN}}
+
+
+\begin{document}
+\setlength\parindent{0pt}
+%\LARGE
+\large
+%\begin{align*}
+%\begin{align*}
+%\begin{equation}
+%\begin{split}
+\input{Equations}
+%\end{split}
+%\end{equation}
+%\end{align*}
+%\end{align*}
+
+\end{document}

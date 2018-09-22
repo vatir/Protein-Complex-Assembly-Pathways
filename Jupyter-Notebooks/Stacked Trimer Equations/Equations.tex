@@ -1,0 +1,33 @@
+\begin{equation*}k^{eff}_{i,j} = \alpha \kon \kdSub{1}^i \kdSub{2}^j \mathrm{e}^{(i+j-1)\Delta G_p^0/RT}\end{equation*}
+\begin{equation*}\alpha = c_0^{-i - j}\end{equation*}
+\begin{equation*}k_p = \orderm{6}\ \ \konunit\end{equation*}
+\begin{align*}\DCDtNoSpacing{\species{1}} &= \kon{}(-6\Conc{\species{1}}^2-4\Conc{\species{1}}\Conc{\species{2}}-3\Conc{\species{1}}\Conc{\species{3}}-3\Conc{\species{1}}\Conc{\species{4}}-2\Conc{\species{1}}\Conc{\species{5}}-3\Conc{\species{1}}\Conc{\species{6}}-2\Conc{\species{1}}\Conc{\species{7}}\\
+ & \quad -2\Conc{\species{1}}\Conc{\species{8}}-3\Conc{\species{1}}\Conc{\species{9}}-2\Conc{\species{1}}\Conc{\species{10}}-\Conc{\species{1}}\Conc{\species{11}})+2\Conc{\species{2}}k^{eff}_{0,1}\\
+ & \quad +2\Conc{\species{3}}k^{eff}_{1,0}+\Conc{\species{4}}k^{eff}_{1,0}+\Conc{\species{4}}k^{eff}_{0,1}+2\Conc{\species{5}}k^{eff}_{1,0}+\Conc{\species{6}}k^{eff}_{1,0}+\Conc{\species{6}}k^{eff}_{0,1}+2\Conc{\species{7}}k^{eff}_{1,0}\\
+ & \quad +4\Conc{\species{8}}k^{eff}_{1,1}+3\Conc{\species{9}}k^{eff}_{2,0}+2\Conc{\species{10}}k^{eff}_{2,0}+\Conc{\species{10}}k^{eff}_{0,1}+2\Conc{\species{11}}k^{eff}_{2,1}+\Conc{\species{11}}k^{eff}_{2,0}+2\Conc{\species{11}}k^{eff}_{1,1}+6\Conc{\species{12}}k^{eff}_{2,1}-\delta\Conc{\species{1}}+Q\\[0.5em]
+\DCDtNoSpacing{\species{2}} &= \kon{}(\Conc{\species{1}}^2-4\Conc{\species{1}}\Conc{\species{2}}-8\Conc{\species{2}}^2-2\Conc{\species{2}}\Conc{\species{3}}-2\Conc{\species{2}}\Conc{\species{4}}-2\Conc{\species{2}}\Conc{\species{6}}-2\Conc{\species{2}}\Conc{\species{8}}) \\
+ & \quad -\Conc{\species{2}}k^{eff}_{0,1}+\Conc{\species{4}}k^{eff}_{1,0}+\Conc{\species{6}}k^{eff}_{1,0}+2\Conc{\species{8}}k^{eff}_{2,0}+\Conc{\species{10}}k^{eff}_{2,0}+2\Conc{\species{11}}k^{eff}_{3,0}\\
+ & \quad +3\Conc{\species{12}}k^{eff}_{4,0}-\delta\Conc{\species{2}}\\[0.5em]
+\DCDtNoSpacing{\species{3}} &= \kon{}(2\Conc{\species{1}}^2-3\Conc{\species{1}}\Conc{\species{3}}-2\Conc{\species{2}}\Conc{\species{3}}-6\Conc{\species{3}}^2-\Conc{\species{3}}\Conc{\species{4}}-\Conc{\species{3}}\Conc{\species{6}}-3\Conc{\species{3}}\Conc{\species{9}}\\
+ & \quad -\Conc{\species{3}}\Conc{\species{10}})-\Conc{\species{3}}k^{eff}_{1,0}+\Conc{\species{4}}k^{eff}_{0,1}+2\Conc{\species{5}}k^{eff}_{0,1}+\Conc{\species{6}}k^{eff}_{0,1}+2\Conc{\species{7}}k^{eff}_{0,1}\\
+ & \quad +2\Conc{\species{8}}k^{eff}_{0,2}+3\Conc{\species{9}}k^{eff}_{2,0}+\Conc{\species{10}}k^{eff}_{2,0}+2\Conc{\species{11}}k^{eff}_{2,1}+\Conc{\species{11}}k^{eff}_{0,2}+6\Conc{\species{12}}k^{eff}_{2,2}-\delta\Conc{\species{3}}\\[0.5em]
+\DCDtNoSpacing{\species{4}} &= \kon{}(2\Conc{\species{1}}\Conc{\species{2}}+\Conc{\species{1}}\Conc{\species{3}}-3\Conc{\species{1}}\Conc{\species{4}}-2\Conc{\species{2}}\Conc{\species{4}}-\Conc{\species{3}}\Conc{\species{4}}-2\Conc{\species{4}}^2)-\Conc{\species{4}}k^{eff}_{1,0}\\
+ & \quad -\Conc{\species{4}}k^{eff}_{0,1}+2\Conc{\species{5}}k^{eff}_{1,0}+2\Conc{\species{8}}k^{eff}_{1,1}+\Conc{\species{10}}k^{eff}_{2,0}+\Conc{\species{11}}k^{eff}_{3,0}+\Conc{\species{11}}k^{eff}_{2,1}\\
+ & \quad +6\Conc{\species{12}}k^{eff}_{4,1}-\delta\Conc{\species{4}}\\[0.5em]
+\DCDtNoSpacing{\species{5}} &= \kon{}(\Conc{\species{1}}\Conc{\species{4}}-2\Conc{\species{1}}\Conc{\species{5}}+\Conc{\species{3}}^2)-2\Conc{\species{5}}k^{eff}_{1,0}-\Conc{\species{5}}k^{eff}_{0,1}+\Conc{\species{11}}k^{eff}_{2,1}-\delta\Conc{\species{5}}\\[0.5em]
+\DCDtNoSpacing{\species{6}} &= \kon{}(2\Conc{\species{1}}\Conc{\species{2}}+\Conc{\species{1}}\Conc{\species{3}}-3\Conc{\species{1}}\Conc{\species{6}}-2\Conc{\species{2}}\Conc{\species{6}}-\Conc{\species{3}}\Conc{\species{6}}-2\Conc{\species{6}}^2)-\Conc{\species{6}}k^{eff}_{1,0}\\
+ & \quad -\Conc{\species{6}}k^{eff}_{0,1}+2\Conc{\species{7}}k^{eff}_{1,0}+2\Conc{\species{8}}k^{eff}_{1,1}+\Conc{\species{10}}k^{eff}_{2,0}+\Conc{\species{11}}k^{eff}_{3,0}+\Conc{\species{11}}k^{eff}_{2,1}\\
+ & \quad +6\Conc{\species{12}}k^{eff}_{4,1}-\delta\Conc{\species{6}}\\[0.5em]
+\DCDtNoSpacing{\species{7}} &= \kon{}(\Conc{\species{1}}\Conc{\species{6}}-2\Conc{\species{1}}\Conc{\species{7}}+\Conc{\species{3}}^2)-2\Conc{\species{7}}k^{eff}_{1,0}-\Conc{\species{7}}k^{eff}_{0,1}+\Conc{\species{11}}k^{eff}_{2,1}-\delta\Conc{\species{7}}\\[0.5em]
+\DCDtNoSpacing{\species{8}} &= \kon{}(\Conc{\species{1}}\Conc{\species{4}}+\Conc{\species{1}}\Conc{\species{6}}-2\Conc{\species{1}}\Conc{\species{8}}+4\Conc{\species{2}}^2-2\Conc{\species{2}}\Conc{\species{8}}+\Conc{\species{3}}^2)-4\Conc{\species{8}}k^{eff}_{1,1}\\
+ & \quad -\Conc{\species{8}}k^{eff}_{2,0}-\Conc{\species{8}}k^{eff}_{0,2}+\Conc{\species{11}}k^{eff}_{2,0}+3\Conc{\species{12}}k^{eff}_{4,0}-\delta\Conc{\species{8}}\\[0.5em]
+\DCDtNoSpacing{\species{9}} &= \kon{}(\Conc{\species{1}}\Conc{\species{3}}-3\Conc{\species{1}}\Conc{\species{9}}-3\Conc{\species{3}}\Conc{\species{9}}-6\Conc{\species{9}}^2)-3\Conc{\species{9}}k^{eff}_{2,0}+\Conc{\species{10}}k^{eff}_{0,1}\\
+ & \quad +\Conc{\species{11}}k^{eff}_{0,2}+2\Conc{\species{12}}k^{eff}_{0,3}-\delta\Conc{\species{9}}\\[0.5em]
+\DCDtNoSpacing{\species{10}} &= \kon{}(\Conc{\species{1}}\Conc{\species{4}}+\Conc{\species{1}}\Conc{\species{6}}+3\Conc{\species{1}}\Conc{\species{9}}-2\Conc{\species{1}}\Conc{\species{10}}+2\Conc{\species{2}}\Conc{\species{3}}-\Conc{\species{3}}\Conc{\species{10}}) \\
+ & \quad -3\Conc{\species{10}}k^{eff}_{2,0}-\Conc{\species{10}}k^{eff}_{0,1}+2\Conc{\species{11}}k^{eff}_{1,1}+6\Conc{\species{12}}k^{eff}_{2,2}-\delta\Conc{\species{10}}\\[0.5em]
+\DCDtNoSpacing{\species{11}} &= \kon{}(2\Conc{\species{1}}\Conc{\species{5}}+2\Conc{\species{1}}\Conc{\species{7}}+2\Conc{\species{1}}\Conc{\species{8}}+2\Conc{\species{1}}\Conc{\species{10}}-\Conc{\species{1}}\Conc{\species{11}}+2\Conc{\species{2}}\Conc{\species{4}}\\
+ & \quad +2\Conc{\species{2}}\Conc{\species{6}}+\Conc{\species{3}}\Conc{\species{4}}+\Conc{\species{3}}\Conc{\species{6}}+3\Conc{\species{3}}\Conc{\species{9}})-4\Conc{\species{11}}k^{eff}_{2,1}-\Conc{\species{11}}k^{eff}_{2,0}\\
+ & \quad -2\Conc{\species{11}}k^{eff}_{1,1}-2\Conc{\species{11}}k^{eff}_{3,0}-\Conc{\species{11}}k^{eff}_{0,2}+6\Conc{\species{12}}k^{eff}_{2,1}-\delta\Conc{\species{11}}\\[0.5em]
+\DCDtNoSpacing{\species{12}} &= \kon{}(\Conc{\species{1}}\Conc{\species{11}}+2\Conc{\species{2}}\Conc{\species{8}}+\Conc{\species{3}}\Conc{\species{10}}+\Conc{\species{4}}^2+\Conc{\species{6}}^2+3\Conc{\species{9}}^2)-6\Conc{\species{12}}k^{eff}_{2,1}\\
+ & \quad -3\Conc{\species{12}}k^{eff}_{4,0}-6\Conc{\species{12}}k^{eff}_{2,2}-6\Conc{\species{12}}k^{eff}_{4,1}-\Conc{\species{12}}k^{eff}_{0,3}-\delta\Conc{\species{12}}\\[0.5em]
+\end{align*}

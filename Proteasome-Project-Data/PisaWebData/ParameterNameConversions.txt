@@ -1,0 +1,28 @@
+Parameter Name Conversions:
+
+Assembly Data:
+nocc : total number of corresponding interfaces in the assembly
+
+Interface Data:
+n_interfaces : # of interfaces
+css : Complex Formation Significance Score (CSS) Higher the better
+pvalue : The closer to 0.5 the better 
+int_solv_en : Delta G for the interface (This value does not include the effect
+			of satisfied hydrogen bonds and salt bridges across the interface.)
+stab_en : Unknown but seems to be very close to int_solv_en
+int_area : BSA (A^2)
+
+Copied from Random PDBePISA info tabs:
+Change of the solvation energy of the structure due to the interface formation ΔGs, in kcal/M.
+Average solvation energy gain
+Solvation energy gain due to the interface formation ΔGave, in kcal/M, which would be obtained if interface atoms atoms are picked randomly from the structure surface, such as to amount to the observed interface area.
+
+P-value
+P-value of the solvation energy gain of the structure. P-value defined as probability to obtain solvation energy gain ΔGs lower than observed, if interface atoms are picked randomly from protein surface such as to amount to the observed interface area. P-value is a measure of interface specificity, showing how surprising, in energy terms, the interface is.
+For example, P=0.5 means that the interface is not "surprising" at all with ΔGs = ΔGave. P>0.5 means that the interface is less hydrophobic then it could be (ΔGs > ΔGave), therefore the interface is likely to be an artefact of crystal packing. P<0.5 indicates interfaces with surprising (higher than would-be-an-average for given structures) hydrophobicity (ΔGs < ΔGave), implying that the interface surface can be interaction-specific. The limiting case of P=0 means that no other interface of the observed area may have a lower ΔGs, therefore such interface is a truly unique spot on protein surface.
+
+Note that the above quantities depend on the interface and total surface areas of the structure. The algorithm of surface area calculations employs a space discretisation, which makes the results dependent slightly on molecule orientation. It is therefore normal to see slightly different surface areas and, as a consequence, solvation energies for identical structures and interfaces in the same entry.
+
+Random Notes:
+http://www.rcsb.org/pdb/statistics/clusterStatistics.do
+http://www.rcsb.org/pdb/software/rest.do#seqClust
